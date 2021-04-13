@@ -1,0 +1,211 @@
+.page-footer__wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  padding-bottom: 74px;
+
+  font-family: $font-family;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: transparentize($very-dark, 0.5);
+}
+
+.page-footer__other-tour {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 403px;
+
+  padding: 0 20px 0 13px;
+  border-right: 1px solid $gray;
+}
+
+.page-footer__contact {
+  margin-right: 21px;
+  margin-left: auto;
+  padding: 0 20px 0 20px;
+}
+
+.page-footer__block-message {
+  width: 320px;
+  padding-left: 49px;
+
+  border-left: 1px solid $gray;
+}
+
+.page-footer__title {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 21px;
+
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 600;
+  color: $very-dark;
+}
+
+.page-footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  margin-right: 50px;
+
+  &:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}
+
+.page-footer__list-item {
+  display: block;
+  margin-bottom: 10px;
+
+  line-height: 17px;
+  color: transparentize($very-dark, 0.5);
+
+  &:hover,
+  &foter {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $very-dark;
+  }
+}
+
+.page-footer__contact-item {
+  display: flex;
+  margin-bottom: 17px;
+
+  color: $yellow-pink;
+  text-decoration: underline;
+
+  &--mail {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &--tel {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  &:hover,
+  &:focus {
+    color: transparentize($very-dark, 0.3);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.page-footer__contact-icon {
+  &--mail {
+    margin-right: 14px;
+
+    fill: $gray;
+  }
+
+  &--tel {
+    margin-right: 17px;
+    margin-left: 6px;
+
+    fill: none;
+    stroke: $gray;
+  }
+}
+
+.page-footer__text {
+  margin: 0;
+}
+
+@media (max-width: 1169px) {
+  .page-footer {
+    padding: 0 22px 50px 22px;
+  }
+
+  .page-footer__other-tour {
+    width: 395px;
+    margin-bottom: 18px;
+    padding: 0 20px 0 0;
+  }
+
+  .page-footer__list {
+    min-width: 95px;
+    margin-right: 30px;
+  }
+
+  .page-footer__contact {
+    margin-right: 0;
+    padding: 0 22px 0 20px;
+  }
+
+  .page-footer__block-message {
+    width: 100%;
+    padding: 30px 0 0 0;
+
+    text-align: center;
+
+    border-top: 1px solid $gray;
+    border-left: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-footer {
+    padding: 0 12px 39px 12px;
+  }
+
+  .page-footer__other-tour {
+    justify-content: center;
+    width: auto;
+    margin-bottom: 0;
+    padding: 0 9px 0 0;
+
+    border: none;
+    border-bottom: 1px solid $gray;
+  }
+
+  .page-footer__title {
+    text-align: center;
+  }
+
+  .page-footer__list {
+    width: 134px;
+    margin-right: 0;
+    margin-bottom: 10px;
+
+    text-align: center;
+  }
+
+  .page-footer__contact {
+    margin-left: 0;
+    padding: 29px 22px 0 20px;
+  }
+
+  .page-footer__contact-item {
+    justify-content: center;
+
+    &--mail {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &--tel {
+      margin-bottom: 13px;
+      margin-right: 10px;
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+
+  .page-footer__block-message {
+    padding: 28px 0 0 8px;
+  }
+}

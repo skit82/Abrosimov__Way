@@ -1,0 +1,38 @@
+.button {
+  display: block;
+  padding: 30px 40px;
+
+  font-family: $font-family;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  background-color: $yellow-pink;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $burnt-sienna;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 767px) {
+  .button {
+    padding: 19px 40px;
+
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+}

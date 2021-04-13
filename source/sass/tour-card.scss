@@ -1,0 +1,227 @@
+.tour-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 636px;
+  padding-bottom: 40px;
+
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: transparentize($text-dark, 0.3);
+  letter-spacing: -0.466667px;
+
+  &--greece .tour-card__feedback {
+    background-image: url("../img/big-greece-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/big-greece-desktop@2x.jpg");
+    }
+  }
+
+  &--albania .tour-card__feedback {
+    background-image: url("../img/big-albania-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/big-albania-desktop@2x.jpg");
+    }
+  }
+
+  &--macedonia .tour-card__feedback {
+    background-image: url("../img/big-macedonia-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/big-macedonia-desktop@2x.jpg");
+    }
+  }
+
+  &--montenegro .tour-card__feedback {
+    background-image: url("../img/big-montenegro-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/big-montenegro-desktop@2x.jpg");
+    }
+  }
+
+  &--croatia .tour-card__feedback {
+    background-image: url("../img/big-croatia-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/big-croatia-desktop@2x.jpg");
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.tour-card__wrapper {
+  width: 375px;
+  padding-bottom: 6px;
+}
+
+.tour-card__title {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 48px;
+
+  font-size: 55px;
+  line-height: 90px;
+  font-weight: 600;
+  color: $text-dark;
+  letter-spacing: -1.245px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+
+    width: 175px;
+    height: 3px;
+
+    background-color: $yellow-pink;
+  }
+}
+
+.tour-card__text {
+  margin: 0;
+  margin-bottom: 49px;
+}
+
+.tour-card__button {
+  width: 250px;
+  padding: 30px 30px;
+}
+
+.tour-card__feedback {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 700px;
+  align-self: stretch;
+
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+@media (max-width: 1169px) {
+  .tour-card {
+    flex-direction: column;
+
+    &--greece .tour-card__feedback {
+      background-image: url("../img/big-greece-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/big-greece-tablet@2x.jpg");
+      }
+    }
+
+    &--albania .tour-card__feedback {
+      background-image: url("../img/big-albania-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/big-albania-tablet@2x.jpg");
+      }
+    }
+
+    &--macedonia .tour-card__feedback {
+      background-image: url("../img/big-macedonia-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/big-macedonia-tablet@2x.jpg");
+      }
+    }
+
+    &--montenegro .tour-card__feedback {
+      background-image: url("../img/big-montenegro-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/big-montenegro-tablet@2x.jpg");
+      }
+    }
+
+    &--croatia .tour-card__feedback {
+      background-image: url("../img/big-croatia-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/big-croatia-tablet@2x.jpg");
+      }
+    }
+  }
+
+  .tour-card__wrapper {
+    width: auto;
+    margin-bottom: 20px;
+    padding: 0 21px 10px 21px;
+  }
+
+  .tour-card__title {
+    margin-bottom: 21px;
+
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: $text-dark;
+    letter-spacing: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .tour-card__text {
+    margin-bottom: 19px;
+
+    text-align: center;
+  }
+
+  .tour-card__button {
+    margin: 0 auto;
+    padding: 19px 40px;
+  }
+
+  .tour-card__feedback {
+    justify-content: center;
+    width: auto;
+    padding-top: 81px;
+
+    background-size: 100% auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .tour-card__wrapper {
+    margin-bottom: 40px;
+    padding: 0 16px 10px 16px;
+  }
+
+  .tour-card__title {
+    margin-bottom: 21px;
+
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .tour-card__text {
+    margin-bottom: 18px;
+  }
+
+  .tour-card__button {
+    width: auto;
+  }
+
+  .tour-card__feedback {
+    padding: 51px 26px 0 26px;
+  }
+}

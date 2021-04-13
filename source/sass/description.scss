@@ -1,0 +1,46 @@
+.description {
+  position: relative;
+
+  background-color: transparent;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 157px;
+    left: -137px;
+    z-index: -1;
+
+    width: 1444px;
+    height: 1089px;
+
+    background-image: url("../img/places-back.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.description__list-link {
+  margin-bottom: 79px;
+}
+
+@media (max-width: 1169px) {
+  .description {
+    &::before {
+      display: none;
+    }
+  }
+
+  .description__list-link {
+    margin-bottom: 32px;
+    margin-left: 37px;
+
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 767px) {
+  .description__list-link {
+    margin-bottom: 24px;
+    margin-left: 16px;
+  }
+}

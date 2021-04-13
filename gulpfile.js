@@ -58,9 +58,9 @@ const images = () => {
 exports.images = images;
 
 const scripts = () => {
-  return gulp.src("source/js/{map.js,modal.js,toggle-nav.js}")
+  return gulp.src("source/js/{main.js,map.js,modal.js,toggle-nav.js}")
   .pipe(uglify())
-  .pipe(rename("{map.min.js,modal.min.js,toggle-nav.min.js}"))
+  .pipe(rename("{main.min.js,map.min.js,modal.min.js,toggle-nav.min.js}"))
   .pipe(gulp.dest("build/js"))
   .pipe(sync.stream());
 }

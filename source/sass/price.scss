@@ -1,0 +1,402 @@
+.price {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 138px 0;
+
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: transparentize($text-dark, 0.3);
+}
+
+.price__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+  width: 770px;
+}
+
+.price__item {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  min-height: 602px;
+  padding: 40px 30px 30px 30px;
+
+  background-color: $white;
+  box-shadow: 0 0 0 1px transparentize($text-dark, 0.7);
+  border-radius: 6px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 3px $yellow-pink;
+  }
+
+  &:hover .price__item-title,
+  &:focus .price__item-title {
+    color: $yellow-pink;
+  }
+
+  &:hover .price__item-text::after,
+  &:focus .price__item-text::after {
+    background-color: $yellow-pink;
+    opacity: 0.5;
+  }
+
+  &:hover .price__item-advantage::before,
+  &:focus .price__item-advantage::before {
+    background-image: url("../img/icon-checkmark-black.svg");
+  }
+
+  &--top {
+    padding: 37px 30px 30px 30px;
+  }
+
+  &--top .price__item-title {
+    margin-bottom: 40px;
+
+    letter-spacing: 0;
+  }
+
+  &--top .price__item-advantage:first-child {
+    margin-bottom: 6px;
+  }
+
+  &--top .price__item-advantage::before {
+    top: 6px;
+    left: -31px;
+
+    background-image: url("../img/icon-checkmark-black.svg");
+  }
+}
+
+.price__item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 37px;
+
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 600;
+  text-align: justify;
+  color: transparentize($very-dark, 0.3);
+  letter-spacing: -1.27273px;
+}
+
+.price__item-cost {
+  font-size: 25px;
+  line-height: 34px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.price__item-text {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  margin: 0;
+  margin-bottom: 59px;
+
+  line-height: 24px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+
+    width: 310px;
+    height: 1px;
+
+    background-color: transparentize($text-dark, 0.3);
+  }
+}
+
+.price__item-list {
+  margin: 0;
+  padding: 0 10px 0 30px;
+  list-style: none;
+}
+
+.price__item-advantage {
+  position: relative;
+
+  margin-bottom: 15px;
+
+  line-height: 32px;
+  color: $text-dark;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    left: -34px;
+
+    width: 22px;
+    height: 22px;
+
+    background-image: url("../img/icon-checkmark-focus.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.price__item-button {
+  margin-top: auto;
+}
+
+.price__wrapper {
+  width: 289px;
+  padding-top: 30px;
+}
+
+.price__title {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 47px;
+
+  font-size: 55px;
+  line-height: 90px;
+  font-weight: 600;
+  color: $text-dark;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+
+    width: 175px;
+    height: 3px;
+
+    background-color: $yellow-pink;
+  }
+}
+
+.price__text {
+  margin: 0;
+  margin-right: -4px;
+  margin-bottom: 61px;
+}
+
+.price__tel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0;
+  margin-right: 32px;
+  margin-bottom: 13px;
+
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 500;
+  color: $text-dark;
+}
+
+.price__tel-message {
+  margin-bottom: 13px;
+}
+
+.price__tel-number {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+  text-decoration: none;
+  color: $black;
+
+  stroke: $yellow-pink;
+
+  &:hover,
+  &:focus {
+    color: $yellow-pink;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.price__tel-icon {
+  margin-right: 15px;
+
+  fill: none;
+}
+
+@media (max-width: 1169px) {
+  .price {
+    flex-direction: column;
+    padding: 0 0 106px 0;
+  }
+
+  .price__list {
+    order: 2;
+    width: auto;
+    padding: 0 71px 20px 71px;
+  }
+
+  .price__wrapper {
+    order: 1;
+    width: auto;
+    padding: 0 22px 31px 22px;
+  }
+
+  .price__title {
+    margin-bottom: 20px;
+
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .price__text {
+    margin-bottom: 33px;
+
+    text-align: center;
+  }
+
+  .price__tel {
+    align-items: center;
+    margin: 0;
+
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .price__tel-message {
+    margin-bottom: 10px;
+  }
+
+  .price__tel-number {
+    font-size: 18px;
+    color: $yellow-pink;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $very-dark;
+    }
+  }
+
+  .price__tel-icon {
+    display: none;
+  }
+
+  .price__item {
+    width: 46%;
+    min-height: 627px;
+    padding: 28px 0 0 0;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &--top .price__item-title {
+      margin-bottom: 5px;
+    }
+
+    &:hover .price__item-list,
+    &:focus .price__item-list {
+      border-top: 1px solid $yellow-pink;
+    }
+  }
+
+  .price__item-title {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .price__item-cost {
+    line-height: 48px;
+  }
+
+  .price__item-text {
+    width: auto;
+    margin: 0 15px 8px 15px;
+
+    text-align: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .price__item-list {
+    margin: 0 20px 10px 20px;
+    padding: 21px 0 0 30px;
+
+    border-top: 1px solid transparentize($text-dark, 0.3);
+  }
+
+  .price__item-advantage {
+    margin-bottom: 10px;
+  }
+
+  .price__item-button {
+    margin: auto -1px -1px -1px;
+    padding: 20px 40px 18px 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .price {
+    width: auto;
+    padding: 0;
+  }
+
+  .price__wrapper {
+    padding: 0 27px 41px 22px;
+  }
+
+  .price__title {
+    margin-bottom: 19px;
+
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .price__text {
+    margin-bottom: 19px;
+  }
+
+  .price__list {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 16px 20px 16px;
+  }
+
+  .price__item {
+    width: 288px;
+    min-height: 614px;
+    margin-bottom: 30px;
+    padding: 28px 0 0 0;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

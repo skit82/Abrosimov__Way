@@ -1,0 +1,165 @@
+.page-header {
+  display: flex;
+  align-items: center;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 37px 0 31px 0;
+}
+
+.page-header__logo {
+  display: flex;
+  align-items: center;
+  // margin-top: -6px;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.7;
+  }
+
+  &[href]:active {
+    opacity: 0.5;
+  }
+}
+
+.page-header__toggle {
+  display: none;
+}
+
+.page-header__tel {
+  display: flex;
+  align-items: center;
+  margin-right: 14px;
+  margin-left: 60px;
+
+  color: $very-dark;
+  text-decoration: underline;
+  stroke: $very-dark;
+
+  &:hover,
+  &focus {
+    color: $yellow-pink;
+    stroke: $yellow-pink;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.page-header__tel-icon {
+  margin-right: 16px;
+
+  fill: none;
+}
+
+@media (max-width: 1169px) {
+  .page-header {
+    padding: 18px 21px 10px 21px;
+
+    &--no-js .page-header__toggle {
+      display: none;
+    }
+
+    &--close .main-nav-box {
+      display: none;
+    }
+
+    &--open .page-header__toggle {
+      background-color: transparent;
+      background-image: url("../img/icon-close.svg");
+      background-position: 10px 0px;
+    }
+  }
+
+  .page-header__logo {
+    margin-top: 0;
+  }
+
+  .page-header__logo-img {
+    width: 58px;
+    height: auto;
+  }
+
+  .page-header__toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 6;
+
+    padding: 0;
+
+    width: 72px;
+    height: 50px;
+
+    background-color: $yellow-pink;
+    background-image: url("../img/icon-menu.svg");
+    background-repeat: no-repeat;
+    background-position: 21px 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .page-header__tel {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-header {
+    width: auto;
+    padding: 18px 50px 15px 16px;
+
+    &--no-js .page-header__toggle {
+      display: none;
+    }
+
+    &--no-js {
+      display: flex;
+      flex-direction: column;
+      padding: 18px 20px 15px 20px;
+    }
+
+    &--no-js .page-header__logo {
+      margin-bottom: 15px;
+    }
+
+    &--no-js .main-nav-box {
+      // width: 100%;
+      // margin: 0;
+      display: none;
+    }
+
+    &--open .page-header__toggle {
+      background-color: transparent;
+      background-image: url("../img/icon-close.svg");
+      width: 50px;
+      height: 52px;
+      background-position: center center;
+    }
+  }
+
+  .page-header__toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 6;
+
+    padding: 0;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $yellow-pink;
+    background-image: url("../img/icon-menu.svg");
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .page-header__tel {
+    display: none;
+  }
+}
