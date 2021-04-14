@@ -16,7 +16,10 @@
 }
 
 .main-nav__link {
-  margin-left: 40px;
+  margin-left: 32px;
+  font-size: $font-size - 2;
+  line-height: $font-size + 1;
+  font-weight: 500;
   text-decoration: none;
   color: $very-dark;
 
@@ -54,12 +57,12 @@
       display: block;
       margin: 0;
       margin-bottom: 30px;
-      padding: 15px 40px 17px 16px;
+      padding: 15px 40px 17px 40px;
 
-      font-size: 20px;
-      line-height: 28px;
+      font-size: $font-size--h2;
+      line-height: $font-size--h2 + 8;
       font-weight: 600;
-      text-align: center;
+      text-align: left;
       color: $modal-text;
 
       background-color: $bg-light;

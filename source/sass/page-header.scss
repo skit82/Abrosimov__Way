@@ -28,9 +28,10 @@
 .page-header__tel {
   display: flex;
   align-items: center;
-  margin-right: 14px;
+  margin-right: 15px;
   margin-left: 60px;
-
+  font-size: $font-size + 2;
+  line-height: $font-size--h3 + 8;
   color: $very-dark;
   text-decoration: underline;
   stroke: $very-dark;
@@ -39,6 +40,7 @@
   &focus {
     color: $yellow-pink;
     stroke: $yellow-pink;
+    fill: $yellow-pink;
   }
 
   &:active {
@@ -47,7 +49,7 @@
 }
 
 .page-header__tel-icon {
-  margin-right: 16px;
+  margin-right: 10px;
 
   fill: none;
 }
@@ -108,7 +110,7 @@
 @media (max-width: 767px) {
   .page-header {
     width: auto;
-    padding: 18px 50px 15px 16px;
+    padding: 18px 50px 10px 16px;
 
     &--no-js .page-header__toggle {
       display: none;

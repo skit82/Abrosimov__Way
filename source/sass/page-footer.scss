@@ -7,8 +7,8 @@
   padding-bottom: 74px;
 
   font-family: $font-family;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: $font-size--middle;
+  line-height: $font-size--middle + 10;
   font-weight: 400;
   font-style: normal;
   text-align: left;
@@ -19,7 +19,7 @@
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
-  width: 403px;
+  width: 370px;
 
   padding: 0 20px 0 13px;
   border-right: 1px solid $gray;
@@ -32,7 +32,7 @@
 }
 
 .page-footer__block-message {
-  width: 320px;
+  width: 328px;
   padding-left: 49px;
 
   border-left: 1px solid $gray;
@@ -43,8 +43,8 @@
   margin: 0;
   margin-bottom: 21px;
 
-  font-size: 18px;
-  line-height: 32px;
+  font-size: $font-size + 2;
+  line-height: $font-size + 16;
   font-weight: 600;
   color: $very-dark;
 }
@@ -86,13 +86,13 @@
   text-decoration: underline;
 
   &--mail {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: $font-size--middle;
+    line-height: $font-size--middle + 2;
   }
 
   &--tel {
-    font-size: 16px;
-    line-height: 32px;
+    font-size: $font-size;
+    line-height: $font-size + 16;
   }
 
   &:hover,
@@ -131,7 +131,7 @@
   }
 
   .page-footer__other-tour {
-    width: 395px;
+    width: 374px;
     margin-bottom: 18px;
     padding: 0 20px 0 0;
   }
@@ -186,6 +186,7 @@
 
   .page-footer__contact {
     margin-left: 0;
+    margin: 0 auto;
     padding: 29px 22px 0 20px;
   }
 
@@ -193,15 +194,15 @@
     justify-content: center;
 
     &--mail {
-      font-size: 14px;
-      line-height: 17px;
+      font-size: $font-size--middle;
+      line-height: $font-size--middle + 3;
     }
 
     &--tel {
       margin-bottom: 13px;
-      margin-right: 10px;
-      font-size: 16px;
-      line-height: 32px;
+      margin-right: 60px;
+      font-size: $font-size;
+      line-height: $font-size + 16;
     }
   }
 

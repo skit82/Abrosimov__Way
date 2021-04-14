@@ -7,8 +7,8 @@
   padding: 70px 0;
 
   font-family: $font-family;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: $font-size;
+  line-height: $font-size + 8;
   font-weight: 400;
   font-style: normal;
   text-align: center;
@@ -25,7 +25,7 @@
 }
 
 .callback__container {
-  width: 656px;
+  width: 556px;
   margin-right: -12px;
   padding: 50px 49px 49px 50px;
 
@@ -38,8 +38,8 @@
   display: block;
   margin-bottom: 11px;
 
-  font-size: 25px;
-  line-height: 32px;
+  font-size: $font-size--h3 + 1;
+  line-height: $font-size--h3 + 8;
   font-weight: 600;
 }
 
@@ -62,19 +62,20 @@
 }
 
 .callback__input {
-  width: 269px;
+  width: 239px;
   margin-bottom: 25px;
   padding: 16px 15px 15px 14px;
 
   font-family: $font-family;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: $font-size--middle;
+  line-height: $font-size--middle + 3;
   color: $very-dark;
 
   border: 1px solid transparentize($text-dark, 0.7);
 
   &-tel {
-    padding: 16px 15px 15px 50px;
+    width: 202px;
+    padding: 16px 35px 15px 30px;
 
     background-image: url("../img/input-ph.svg");
     background-repeat: no-repeat;
@@ -106,7 +107,7 @@
   .callback {
     justify-content: center;
     padding: 70px 0 75px 0;
-
+    margin-bottom: 82px;
     background-size: cover;
     background-position: 0 0;
   }
@@ -117,10 +118,14 @@
 
   .callback__input {
     margin-bottom: 20px;
+
+    &-tel {
+      padding: 16px 30px 15px 30px;
+    }
   }
 
   .callback__button {
-    min-width: 249px;
+    width: 230px;
     padding: 20px 10px 18px 10px;
   }
 }
@@ -143,8 +148,8 @@
   .callback__title {
     margin-bottom: 20px;
 
-    font-size: 25px;
-    line-height: 32px;
+    font-size: $font-size--h3 + 1;
+    line-height: $font-size--h3 + 8;
     font-weight: 600;
   }
 
@@ -161,6 +166,6 @@
   }
 
   .callback__button {
-    width: 288px;
+    width: 208px;
   }
 }

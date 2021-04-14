@@ -2,17 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 636px;
-  padding-bottom: 40px;
-
+  min-height: 596px;
+  padding-bottom: 233px;
   font-family: $font-family;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: $font-size;
+  line-height: $font-size + 12;
   font-weight: 400;
   font-style: normal;
   text-align: left;
   color: transparentize($text-dark, 0.3);
-  letter-spacing: -0.466667px;
+  letter-spacing: -0.47px;
 
   &--greece .tour-card__feedback {
     background-image: url("../img/big-greece-desktop@1x.jpg");
@@ -65,17 +64,17 @@
 
 .tour-card__wrapper {
   width: 375px;
-  padding-bottom: 6px;
+  padding-bottom: 25px;
 }
 
 .tour-card__title {
   position: relative;
-
+  padding-top: 10px;
   margin: 0;
   margin-bottom: 48px;
 
-  font-size: 55px;
-  line-height: 90px;
+  font-size: $font-size--h3 + 31;
+  line-height: $font-size--h3 + 66;
   font-weight: 600;
   color: $text-dark;
   letter-spacing: -1.245px;
@@ -100,8 +99,10 @@
 }
 
 .tour-card__button {
+  display: block;
   width: 250px;
-  padding: 30px 30px;
+  padding-bottom: 30px;
+  padding-top: 31px;
 }
 
 .tour-card__feedback {
@@ -109,6 +110,8 @@
   align-items: center;
   justify-content: flex-end;
   width: 700px;
+  min-height: 596px;
+  height: 100%;
   align-self: stretch;
 
   background-repeat: no-repeat;
@@ -117,6 +120,7 @@
 
 @media (max-width: 1169px) {
   .tour-card {
+    padding-bottom: 56px;
     flex-direction: column;
 
     &--greece .tour-card__feedback {
@@ -169,8 +173,8 @@
   .tour-card__title {
     margin-bottom: 21px;
 
-    font-size: 30px;
-    line-height: 45px;
+    font-size: $font-size--h3 + 6;
+    line-height: $font-size--h3 + 21;
     text-align: center;
     color: $text-dark;
     letter-spacing: 0;
@@ -181,26 +185,43 @@
   }
 
   .tour-card__text {
-    margin-bottom: 19px;
+    margin-bottom: 21px;
 
     text-align: center;
   }
 
   .tour-card__button {
+    width: 170px;
     margin: 0 auto;
-    padding: 19px 40px;
+   padding-bottom: 19px;
+   padding-right: 40px;
+   padding-left: 40px;
+   padding-top: 20px;
   }
 
   .tour-card__feedback {
     justify-content: center;
     width: auto;
-    padding-top: 81px;
+    min-height: 415px;
+    padding-top: 56px;
 
     background-size: 100% auto;
   }
 }
 
 @media (max-width: 767px) {
+  .tour-card {
+    flex-direction: column;
+
+    &--greece .tour-card__feedback {
+      background-image: url("../img/big-greece-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/big-greece-mobile@2x.jpg");
+      }
+    }
+  }
+
   .tour-card__wrapper {
     margin-bottom: 40px;
     padding: 0 16px 10px 16px;
@@ -209,8 +230,8 @@
   .tour-card__title {
     margin-bottom: 21px;
 
-    font-size: 24px;
-    line-height: 36px;
+    font-size: $font-size--h3;
+    line-height: $font-size--h3 + 12;
   }
 
   .tour-card__text {
